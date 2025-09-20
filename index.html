@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Landing Page</title>
-    <!-- Tailwind CSS CDN -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -13,7 +13,7 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Using CSS variables for themes */
+        
         :root {
             --bg-color: #f3f4f6;
             --text-color: #1f2937;
@@ -50,7 +50,7 @@
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-6 md:p-12">
-    <!-- Main content card -->
+    
     <div class="card w-full max-w-lg mx-auto p-8 md:p-12 text-center rounded-3xl">
         <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
             Hello, World!
@@ -59,38 +59,13 @@
             This is another simple website. It uses a different styling method with CSS variables to manage the light and dark themes.
         </p>
 
-        <!-- Interactive button -->
+        
         <button id="themeToggle" class="cta-button font-bold py-3 px-8 rounded-full transform hover:scale-105 transition-all duration-300">
             Switch Theme
         </button>
     </div>
 
-    <!-- JavaScript for interactivity -->
-    <script>
-        const themeToggleButton = document.getElementById('themeToggle');
-        const bodyElement = document.body;
-
-        // Function to toggle between 'light' and 'dark' themes
-        function toggleTheme() {
-            bodyElement.classList.toggle('dark-mode');
-            localStorage.setItem('theme', bodyElement.classList.contains('dark-mode') ? 'dark' : 'light');
-        }
-
-        // Set initial theme based on user's preference or system setting
-        function setInitialTheme() {
-            const storedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-            if (storedTheme === 'dark' || (storedTheme === null && prefersDark)) {
-                bodyElement.classList.add('dark-mode');
-            }
-        }
-
-        // Add event listener to the button
-        themeToggleButton.addEventListener('click', toggleTheme);
-
-        // Call the function to set the theme on page load
-        setInitialTheme();
-    </script>
+    
+    
 </body>
 </html>
